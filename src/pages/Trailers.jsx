@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Trailers() {
   const printTrailersImg = () => {
-    return trailerQuizzes.map((trailer) => (
-      <Link to={`${trailer.id}`} state={{ id: trailer.id }}>
+    return trailerQuizzes.map((trailer, index) => (
+      <Link key={index} to={`${trailer.id}`} state={{ id: trailer.id }}>
         <img
           className="size-64 rounded-3xl object-cover my-3"
           src={trailer.image}

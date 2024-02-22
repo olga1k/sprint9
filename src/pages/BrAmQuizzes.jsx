@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 export default function BrAmQuizzes() {
   const printBrAmImg = () => {
-    return brAmQuizzes.map((quiz) => (
-      <Link to={`${quiz.id}`} state={{ id: quiz.id }}>
+    return brAmQuizzes.map((quiz, index) => (
+      <Link key={index} to={`${quiz.id}`} state={{ id: quiz.id }}>
         <div className="flex flex-col justify-center">
           <img
             className="size-64 rounded-3xl object-cover text-center m-auto "
